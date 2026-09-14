@@ -329,32 +329,6 @@ export const INITIAL_MEDIA = [
 
 export const autoSeedData = async () => {
   try {
-    const leadCount = await Lead.countDocuments();
-    if (leadCount === 0) {
-      console.log("🌱 Database is empty. Seeding initial leads...");
-      await Lead.insertMany(INITIAL_SAMPLE_LEADS);
-      console.log("✅ Sample leads seeded successfully!");
-    }
-
-    const empCount = await Employee.countDocuments();
-    if (empCount === 0) {
-      console.log("🌱 Seeding initial staff employees...");
-      await Employee.insertMany(INITIAL_EMPLOYEES);
-      console.log("✅ Initial staff employees seeded successfully!");
-    }
-
-    const callCount = await CallLog.countDocuments();
-    if (callCount === 0) {
-      await CallLog.insertMany(INITIAL_CALL_LOGS);
-      console.log("✅ Sample call logs seeded successfully!");
-    }
-
-    const emailCount = await EmailLog.countDocuments();
-    if (emailCount === 0) {
-      await EmailLog.insertMany(INITIAL_EMAIL_LOGS);
-      console.log("✅ Sample email logs seeded successfully!");
-    }
-
     const mediaCount = await Media.countDocuments();
     if (mediaCount === 0) {
       console.log("🌱 Seeding initial media metadata for Cloudinary...");
