@@ -100,3 +100,40 @@ export const updateMedia = async (req, res) => {
   }
 };
 
+// POST /api/media/register — Lightweight: saves Cloudinary metadata to MongoDB
+// Called by the admin app after direct-to-Cloudinary upload (no large file payload)
+export const registerMediaAsset = async (req, res) => {
+  try {
+    const { key, title, category, cloudinaryUrl, publicId, format, resourceType, bytes } = req.body;
+
+    if (!key || !cloudinaryUrl) {
+      return res.status(400).json({ success: false, message: "Key and cloudinaryUrl are required" });
+    }
+
+    const mediaDoc = await Media.findOneAndUpdate(
+      { key },
+      {
+        key,
+        title: title || key,
+        category: category || "image",
+        cloudinaryUrl,
+        publicId: publicId || key,
+        format: format || "",
+        resourceType: resourceType || "image",
+        bytes: bytes || 0,
+      },
+      { upsert: true, new: true }
+    );
+
+    console.log(`✅ Media [${key}] registered → ${cloudinaryUrl}`);
+    res.json({
+      success: true,
+      message: "Media registered successfully",
+      data: mediaDoc,
+    });
+  } catch (error) {
+    console.error("Media register error:", error);
+    res.status(500).json({ success: false, message: "Failed to register media", error: error.message });
+  }
+};
+
