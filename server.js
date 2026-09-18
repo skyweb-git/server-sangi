@@ -1,5 +1,5 @@
 import express from "express";
-import cors from "cors";
+// cors package no longer needed — using manual CORS headers below
 import morgan from "morgan";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
@@ -20,7 +20,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// CORS configuration for local dev and online hosting
+// ─── MANUAL CORS HEADERS (runs FIRST, before body parsing) ───
+// This guarantees CORS headers are on EVERY response, even if
+// body parsing fails or the request errors/timeouts downstream.
 const allowedOrigins = [
   "https://admin.sanghicity.in",
   "https://sanghicity.in",
@@ -30,24 +32,27 @@ const allowedOrigins = [
   "http://localhost:5175",
 ];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests with no origin (mobile apps, curl, server-to-server)
-    if (!origin) return callback(null, true);
-    if (process.env.CORS_ORIGIN === "*" || allowedOrigins.includes(origin)) {
-      return callback(null, origin);
-    }
-    return callback(new Error("Not allowed by CORS"));
-  },
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-  optionsSuccessStatus: 200,
-};
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (process.env.CORS_ORIGIN === "*") {
+    // When wildcard, reflect the requesting origin (avoids * + credentials conflict)
+    res.setHeader("Access-Control-Allow-Origin", origin || "*");
+  } else if (origin && allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Max-Age", "86400");
 
-// Handle preflight OPTIONS requests for all routes
-app.options("*", cors(corsOptions));
-app.use(cors(corsOptions));
+  // Immediately respond to preflight OPTIONS
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+  next();
+});
+
+// Body parsing & logging
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(morgan("dev"));
@@ -95,9 +100,14 @@ app.use((req, res) => {
   res.status(404).json({ success: false, message: `Route not found: ${req.originalUrl}` });
 });
 
-// Global Error Handler
+// Global Error Handler — also sets CORS headers so errors aren't blocked
 app.use((err, req, res, next) => {
   console.error("Server Error:", err.stack);
+  const origin = req.headers.origin;
+  if (origin) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+  }
   res.status(err.status || 500).json({
     success: false,
     message: err.message || "Internal Server Error",
