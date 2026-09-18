@@ -18,7 +18,7 @@ const MEDIA_FILES = [
   {
     key: "logo",
     filePath: path.join(PUBLIC_DIR, "ambhuja-logo.png"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786505/maytri_ambhuja/brand/ambhuja_logo.png",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786505/maytri_ambhuja/brand/ambhuja_logo.png",
     resourceType: "image",
     folder: "maytri_ambhuja/brand",
     publicId: "ambhuja_logo",
@@ -28,7 +28,7 @@ const MEDIA_FILES = [
   {
     key: "heroPoster",
     filePath: path.join(PUBLIC_DIR, "hero-bg.png"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786507/maytri_ambhuja/brand/hero_poster.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786507/maytri_ambhuja/brand/hero_poster.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/brand",
     publicId: "hero_poster",
@@ -38,7 +38,7 @@ const MEDIA_FILES = [
   {
     key: "heroBgImage",
     filePath: path.join(PUBLIC_DIR, "hero-bg.png"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786507/maytri_ambhuja/brand/hero_poster.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786507/maytri_ambhuja/brand/hero_poster.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/brand",
     publicId: "hero_poster",
@@ -48,7 +48,7 @@ const MEDIA_FILES = [
   {
     key: "ctaPoster",
     filePath: path.join(PUBLIC_DIR, "cta-bg.jpg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786509/maytri_ambhuja/brand/cta_poster.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786509/maytri_ambhuja/brand/cta_poster.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/brand",
     publicId: "cta_poster",
@@ -58,7 +58,7 @@ const MEDIA_FILES = [
   {
     key: "ctaBgImage",
     filePath: path.join(PUBLIC_DIR, "cta-bg.jpg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786509/maytri_ambhuja/brand/cta_poster.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786509/maytri_ambhuja/brand/cta_poster.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/brand",
     publicId: "cta_poster",
@@ -69,7 +69,7 @@ const MEDIA_FILES = [
   {
     key: "gallery001",
     filePath: path.join(PUBLIC_DIR, "images/001.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786512/maytri_ambhuja/gallery/gallery_001.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786512/maytri_ambhuja/gallery/gallery_001.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_001",
@@ -79,7 +79,7 @@ const MEDIA_FILES = [
   {
     key: "gallery002",
     filePath: path.join(PUBLIC_DIR, "images/002.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786514/maytri_ambhuja/gallery/gallery_002.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786514/maytri_ambhuja/gallery/gallery_002.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_002",
@@ -89,7 +89,7 @@ const MEDIA_FILES = [
   {
     key: "gallery003",
     filePath: path.join(PUBLIC_DIR, "images/003.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786516/maytri_ambhuja/gallery/gallery_003.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786516/maytri_ambhuja/gallery/gallery_003.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_003",
@@ -99,7 +99,7 @@ const MEDIA_FILES = [
   {
     key: "gallery004",
     filePath: path.join(PUBLIC_DIR, "images/004.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786517/maytri_ambhuja/gallery/gallery_004.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786517/maytri_ambhuja/gallery/gallery_004.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_004",
@@ -109,7 +109,7 @@ const MEDIA_FILES = [
   {
     key: "gallery005",
     filePath: path.join(PUBLIC_DIR, "images/005.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786519/maytri_ambhuja/gallery/gallery_005.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786519/maytri_ambhuja/gallery/gallery_005.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_005",
@@ -119,7 +119,7 @@ const MEDIA_FILES = [
   {
     key: "gallery006",
     filePath: path.join(PUBLIC_DIR, "images/006.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786520/maytri_ambhuja/gallery/gallery_006.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786520/maytri_ambhuja/gallery/gallery_006.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_006",
@@ -129,7 +129,7 @@ const MEDIA_FILES = [
   {
     key: "gallery007",
     filePath: path.join(PUBLIC_DIR, "images/007.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786522/maytri_ambhuja/gallery/gallery_007.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786522/maytri_ambhuja/gallery/gallery_007.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_007",
@@ -139,7 +139,7 @@ const MEDIA_FILES = [
   {
     key: "gallery008",
     filePath: path.join(PUBLIC_DIR, "images/008.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786523/maytri_ambhuja/gallery/gallery_008.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786523/maytri_ambhuja/gallery/gallery_008.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_008",
@@ -149,7 +149,7 @@ const MEDIA_FILES = [
   {
     key: "gallery009",
     filePath: path.join(PUBLIC_DIR, "images/009.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786525/maytri_ambhuja/gallery/gallery_009.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786525/maytri_ambhuja/gallery/gallery_009.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_009",
@@ -159,7 +159,7 @@ const MEDIA_FILES = [
   {
     key: "gallery010",
     filePath: path.join(PUBLIC_DIR, "images/010.jpeg"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/image/upload/v1788786526/maytri_ambhuja/gallery/gallery_010.jpg",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/image/upload/v1788786526/maytri_ambhuja/gallery/gallery_010.jpg",
     resourceType: "image",
     folder: "maytri_ambhuja/gallery",
     publicId: "gallery_010",
@@ -416,7 +416,7 @@ const MEDIA_FILES = [
   {
     key: "heroVideo",
     filePath: path.join(PUBLIC_DIR, "am-web-video-22.mp4"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/video/upload/maytri_ambhuja/videos/hero_video.mp4",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/video/upload/maytri_ambhuja/videos/hero_video.mp4",
     resourceType: "video",
     folder: "maytri_ambhuja/videos",
     publicId: "hero_video",
@@ -426,7 +426,7 @@ const MEDIA_FILES = [
   {
     key: "ctaVideo",
     filePath: path.join(PUBLIC_DIR, "cta-bg.mp4"),
-    sourceUrl: "https://res.cloudinary.com/s8b4ps7b/video/upload/maytri_ambhuja/videos/cta_video.mp4",
+    sourceUrl: "https://res.cloudinary.com/li8lgd5l/video/upload/maytri_ambhuja/videos/cta_video.mp4",
     resourceType: "video",
     folder: "maytri_ambhuja/videos",
     publicId: "cta_video",
